@@ -1,8 +1,8 @@
-# == CONFIGURATION ==
-DESTINATION_DIR=/usr/local/java
-JDK_VERSION_TMP=jdk1.7.0_71
+# == CONFIGURATION == (copy to: /etc/profile)
+DESTINATION_DIR=/usr/lib/jvm
+JDK_VERSION_TMP=jdk1.8.0_45
 
-# == ENV VARIABLES ==
+# == ENV VARIABLES == (copy to: /etc/profile)
 JAVA_HOME=${DESTINATION_DIR}/${JDK_VERSION_TMP}
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
 export JAVA_HOME
