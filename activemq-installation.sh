@@ -12,6 +12,8 @@ ps aux | grep activemq
 
 # Test browser interface
 http://localhost:8161/
+# user: admin , password: admin
+http://localhost:8161/admin
 
 # Stop activemq
 sudo service activemq stop
