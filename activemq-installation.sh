@@ -9,4 +9,9 @@ sudo update-rc.d activemq defaults
 sudo service activemq start
 sudo service activemq status
 ps aux | grep activemq
+
+# Test browser interface
+http://localhost:8161/
+
+# Stop activemq
 sudo service activemq stop
