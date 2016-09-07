@@ -1,7 +1,7 @@
 # Download ActiveMQ http://activemq.apache.org/download.html
 # unpack to a specific directory
 # install as a service
-sudo chmod -R 777 /home/tomasz/Development
+sudo chmod -R 777 /home/tomasz/Development/apache-activemq
 sudo ln -s /home/tomasz/Development/apache-activemq/bin/activemq /etc/init.d/activemq
 sudo update-rc.d activemq defaults
 
