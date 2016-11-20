@@ -1,0 +1,15 @@
+    version: '2'
+    services:
+      tomcat.cars:
+        image: tomcat:7.0.73-jre8
+        container_name: "tomcat.cars"
+        volumes:
+          - /home/tomasz/Development/Projects/cars/target/cars:/opt/apps/cars
+          - ./cars.xml:/usr/local/tomcat/conf/Catalina/localhost/cars.xml
+        ports:
+          - 8082:8080
+          
+# ./cars.xml
+#<Context path="/cars" docBase="/opt/apps/cars" reloadable="true">
+#
+#</Context>
