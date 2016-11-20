@@ -8,8 +8,9 @@
           - ./cars.xml:/usr/local/tomcat/conf/Catalina/localhost/cars.xml
         ports:
           - 8082:8080
-          
-# ./cars.xml
-#<Context path="/cars" docBase="/opt/apps/cars" reloadable="true">
-#
-#</Context>
+
+# 1. Create simple webapp:mvn archetype:generate -DgroupId=com.galuszkat -DartifactId=cars -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+# 2 .Create docker directory and add file ./cars.xml with content from below:
+#    <Context path="/cars" docBase="/opt/apps/cars" reloadable="true">
+#    </Context>
+# 3. Open terminal and run docker-compose up
