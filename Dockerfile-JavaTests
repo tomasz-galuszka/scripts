@@ -1,0 +1,22 @@
+FROM java:8 
+
+# Install maven
+RUN apt-get update
+RUN apt-get install -y maven
+
+WORKDIR /code
+
+# Add code to the container
+ADD pom.xml /code/pom.xml
+ADD src /code/src
+
+# Compile code
+RUN ["mvn", "clean"]
+RUN ["mvn", "compile", "-Dmaven.test.skip=true"]
+
+# Run test
+CMD ["mvn", "test"]
+
+###### CMD LINE #####
+docker build -t mycmp/myproject .
+docker run -it --rm mycmp/myproject
