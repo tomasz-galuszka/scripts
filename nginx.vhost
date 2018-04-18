@@ -1,0 +1,13 @@
+server {
+	listen 81;
+	listen [::]:81;
+
+	root /home/tomasz/Development/NGINX_DOC/example;
+
+	server_name example.nginx;
+
+	location / {
+		# First attempt to serve request as file, then as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+}
